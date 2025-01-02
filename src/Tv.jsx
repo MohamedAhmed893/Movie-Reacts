@@ -23,7 +23,7 @@ useEffect(()=>{
           <div className='line mt-4 w-75 m-auto'></div>
         </div>
         {TvData.map((tv,i)=><div key={i} className='col-lg-2 col-md-3 col-sm-6'>
-             <Link to={`/peopledetail/${tv.id}`}>
+             <Link to={`/tvdetails/${tv.id}`}>
              <div>
              <img className='w-100' src={`https://image.tmdb.org/t/p/w500`+tv.poster_path} alt="" />
              

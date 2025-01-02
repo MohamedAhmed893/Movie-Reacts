@@ -31,7 +31,7 @@ export default function App() {
     setData(decodedData)
   }
 
-  function ProtecedRoutes(props) {
+  function ProtectedRoutes(props) {
     if (localStorage.getItem('encodedToken') === null) {
       return <Navigate to="/login" />
     } else {
@@ -58,23 +58,23 @@ export default function App() {
 
       <div className='container'>
         <Routes>
-          <Route path='/' element={<ProtecedRoutes> <Home /></ProtecedRoutes>} />
-          <Route path='home' element={<ProtecedRoutes> <Home /></ProtecedRoutes>} />
-          <Route path='movies' element={<ProtecedRoutes> <Movies /></ProtecedRoutes>} />
-          <Route path='movieDetails' element={<ProtecedRoutes> <MovieDetail /></ProtecedRoutes>}>
-            <Route path=':id' element={<ProtecedRoutes> <MovieDetail /></ProtecedRoutes>} />
+          <Route path='/' element={<ProtectedRoutes> <Home /></ProtectedRoutes>} />
+          <Route path='home' element={<ProtectedRoutes> <Home /></ProtectedRoutes>} />
+          <Route path='movies' element={<ProtectedRoutes> <Movies /></ProtectedRoutes>} />
+          <Route path='movieDetails' element={<ProtectedRoutes> <MovieDetail /></ProtectedRoutes>}>
+            <Route path=':id' element={<ProtectedRoutes> <MovieDetail /></ProtectedRoutes>} />
           </Route>
-          <Route path='people' element={<ProtecedRoutes> <People /></ProtecedRoutes>} />
-          <Route path='tv' element={<ProtecedRoutes> <Tv /></ProtecedRoutes>} />
-          <Route path='tvdetails' element={<ProtecedRoutes> <TvDetails /></ProtecedRoutes>}>
-            <Route path=':id' element={<ProtecedRoutes> <TvDetails /></ProtecedRoutes>} />
+          <Route path='people' element={<ProtectedRoutes> <People /></ProtectedRoutes>} />
+          <Route path='tv' element={<ProtectedRoutes> <Tv /></ProtectedRoutes>} />
+          <Route path='tvdetails' element={<ProtectedRoutes> <TvDetails /></ProtectedRoutes>}>
+            <Route path=':id' element={<ProtectedRoutes> <TvDetails /></ProtectedRoutes>} />
           </Route>
-          <Route path='peopledetail' element={<ProtecedRoutes> <PeopleDetail /></ProtecedRoutes>} >
-            <Route path=':id' element={<ProtecedRoutes> <PeopleDetail /></ProtecedRoutes>} />
+          <Route path='peopledetail' element={<ProtectedRoutes> <PeopleDetail /></ProtectedRoutes>} >
+            <Route path=':id' element={<ProtectedRoutes> <PeopleDetail /></ProtectedRoutes>} />
 
           </Route>
-          <Route path='about' element={<ProtecedRoutes> <About /></ProtecedRoutes>} />
-          <Route path='contacts' element={<ProtecedRoutes> <Contacts /></ProtecedRoutes>} />
+          <Route path='about' element={<ProtectedRoutes> <About /></ProtectedRoutes>} />
+          <Route path='contacts' element={<ProtectedRoutes> <Contacts /></ProtectedRoutes>} />
           <Route path='register' element={<Register />} />
           <Route path='login' element={<Login Data={decodeData} />} />
 
