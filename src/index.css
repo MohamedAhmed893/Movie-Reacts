@@ -43,3 +43,13 @@ ul{
 .pointer{
   cursor: pointer;
 }
+
+.custom-link{
+  text-decoration: underline;
+
+  color: #0dcaf0;
+}
+
+.custom-link:hover{
+  color:#074653 ;
+}
