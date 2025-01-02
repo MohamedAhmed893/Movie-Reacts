@@ -41,8 +41,8 @@ export default function Navbar(props) {
                                 <i className="fab fa-instagram mx-2"></i>
 
                             </li>
-                           {props.Data?<> <li className="nav-item order-first order-lg-last pointer">
-                                <span onClick={props.logout} className="nav-link" aria-current="page">Logout</span>
+                           {props.Data?<> <li className="nav-item order-first order-lg-last">
+                                <span onClick={props.logout} className="nav-link pointer" aria-current="page">Logout</span>
                             </li></>:<> <li className="nav-item order-first order-lg-last">
                                 <Link className="nav-link" aria-current="page" to="register">Register</Link>
                             </li>

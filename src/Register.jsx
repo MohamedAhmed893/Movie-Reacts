@@ -22,7 +22,7 @@ export default function Register(){
     setError('')
     seterrorValidaion([])
    }
-function validation(user){
+function validation(){
     const userSchema =Joi.object({
         first_name:Joi.string().alphanum().min(3).max(10).required(),
         last_name:Joi.string().alphanum().min(3).max(10).required(),
