@@ -11,7 +11,7 @@ export default function Navbar(props) {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                       {props.Data?<>
+                      
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link className="nav-link" aria-current="page" to="home">Home</Link>
@@ -33,7 +33,7 @@ export default function Navbar(props) {
                             </li>
                          
                         </ul>
-                       </>:''}
+                      
                         <ul className="navbar-nav mb-2 ms-auto mb-lg-0">
                             <li className="nav-item d-flex align-items-center order-last order-lg-first">
                                 <i className="fab fa-facebook mx-2"></i>

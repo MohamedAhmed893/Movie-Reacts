@@ -58,23 +58,23 @@ export default function App() {
 
       <div className='container'>
         <Routes>
-          <Route path='/' element={<ProtectedRoutes> <Home /></ProtectedRoutes>} />
-          <Route path='home' element={<ProtectedRoutes> <Home /></ProtectedRoutes>} />
-          <Route path='movies' element={<ProtectedRoutes> <Movies /></ProtectedRoutes>} />
-          <Route path='movieDetails' element={<ProtectedRoutes> <MovieDetail /></ProtectedRoutes>}>
-            <Route path=':id' element={<ProtectedRoutes> <MovieDetail /></ProtectedRoutes>} />
+          <Route path='/' element={<Home />} />
+          <Route path='home' element={<Home />} />
+          <Route path='movies' element={<Movies />} />
+          <Route path='movieDetails' element={<MovieDetail />}>
+            <Route path=':id' element={<MovieDetail />} />
           </Route>
-          <Route path='people' element={<ProtectedRoutes> <People /></ProtectedRoutes>} />
-          <Route path='tv' element={<ProtectedRoutes> <Tv /></ProtectedRoutes>} />
-          <Route path='tvdetails' element={<ProtectedRoutes> <TvDetails /></ProtectedRoutes>}>
-            <Route path=':id' element={<ProtectedRoutes> <TvDetails /></ProtectedRoutes>} />
+          <Route path='people' element={<People />} />
+          <Route path='tv' element={<Tv />} />
+          <Route path='tvdetails' element={<TvDetails />}>
+            <Route path=':id' element={<TvDetails />} />
           </Route>
-          <Route path='peopledetail' element={<ProtectedRoutes> <PeopleDetail /></ProtectedRoutes>} >
-            <Route path=':id' element={<ProtectedRoutes> <PeopleDetail /></ProtectedRoutes>} />
+          <Route path='peopledetail' element={<PeopleDetail />} >
+            <Route path=':id' element={<PeopleDetail />} />
 
           </Route>
-          <Route path='about' element={<ProtectedRoutes> <About /></ProtectedRoutes>} />
-          <Route path='contacts' element={<ProtectedRoutes> <Contacts /></ProtectedRoutes>} />
+          <Route path='about' element={<About />} />
+          <Route path='contacts' element={<Contacts />} />
           <Route path='register' element={<Register />} />
           <Route path='login' element={<Login Data={decodeData} />} />
 
