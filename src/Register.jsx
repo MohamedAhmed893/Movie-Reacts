@@ -82,7 +82,7 @@ function validation(){
                     <label className="mb-2" htmlFor="password">Password</label>
                     <input onChange={getData} type="password" id="password" name="password"  className="form-control mb-2 bg-transparent text-white"/>
                     <button type="submit" className="btn btn-outline-info my-2">{loading ===true?<i className='fas fa-spinner fa-spin'></i>:'Register'}</button>
-                    <p className='text-center'>If you have account <Link className='custom-link' to="/login">Login</Link></p>
+                    <p className='text-center py-4'>If you have account <Link className='custom-link' to="/login">Login</Link></p>
                 </form>
             </div>
         </>

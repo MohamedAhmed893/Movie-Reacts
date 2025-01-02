@@ -67,7 +67,7 @@ async function submitForm(e){
           <label className="mb-2" htmlFor="password">Password</label>
           <input onChange={getData} type="password" id="password" name="password" className="form-control mb-2 bg-transparent text-white" />
           <button type="submit" className="btn btn-outline-info my-2">{loading===true?<i className='fas fa-spinner fa-spin'></i>:'Login'}</button>
-          <p className='text-center'>If you don't have account <Link className='custom-link' to="/register">Register</Link></p>
+          <p className='text-center py-4'>If you don't have account <Link className='custom-link' to="/register">Register</Link></p>
         </form>
       </div>
     </>
